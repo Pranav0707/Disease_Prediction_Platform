@@ -1,9 +1,23 @@
 from django.shortcuts import redirect, render
 from django.contrib.auth import authenticate,login,logout
 from django.contrib import messages
+from .models import Feedback
 from accounts.forms import *
 # Create your views here.
 def index(request):
+    if request.method=="POST":
+        name=request.POST.get('name')
+        phone_number=request.POST.get('phone_number')
+        email=request.POST.get('email')
+        message=request.POST.get('message')
+        print(name,phone_number,email,message)
+        try:
+            Feedback_Form=Feedback(name=name,phone_number=phone_number,email=email,message=message)
+            Feedback_Form.save()
+            messages.success(request,"Feedback saved successfully")
+        except Exception as e:
+            messages.error(request,"Error occured!!!Fill the form again")
+            print(e)
     return render(request,'index.html')
 
 
@@ -36,3 +50,5 @@ def UserRegistration(request):
         "RegistrationForm":form
     }
     return render(request,"register.html",context)
+
+

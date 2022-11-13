@@ -19,3 +19,4 @@ sqlparse==0.4.2
 tzdata==2022.2
 whitenoise==5.2.0
 sklearn 
+scikit-learn
