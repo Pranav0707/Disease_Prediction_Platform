@@ -3,6 +3,7 @@ from django.contrib.auth import authenticate,login,logout
 from django.contrib import messages
 from .models import Feedback
 from accounts.forms import *
+from django.core.mail import send_mail
 # Create your views here.
 def index(request):
     if request.method=="POST":
