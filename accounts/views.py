@@ -39,9 +39,9 @@ def Userlogin(request):
 
 
 def UserRegistration(request):
-    form=UserCreationForm()
+    form=RegistrationForm()
     if request.method=="POST":
-        form=UserCreationForm(request.POST)
+        form=RegistrationForm(request.POST)
         if form.is_valid():
             form.save()
             messages.success(request,"User Successfuly created")
