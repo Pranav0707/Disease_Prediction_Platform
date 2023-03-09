@@ -1,0 +1,3 @@
+accounts/migrations/
+# accounts/__pycache__/
+__pycache__/

@@ -29,12 +29,13 @@ def Userlogin(request):
         user=authenticate(request,username=username,password=password)
         if user:
             login(request,user)
+            print("User logged In")
             return redirect('index')
 
         else:
             messages.error(request,"Username or Password is Incorrect")
 
-    return render(request,"index.html")
+    return render(request,"login.html")
 
 
 def UserRegistration(request):

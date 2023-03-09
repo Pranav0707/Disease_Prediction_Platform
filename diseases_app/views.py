@@ -43,11 +43,14 @@ def Heart_Disease_Prediction(request):
             user=user, age=age, sex=sex, chest_pain_type=chest_pain_type, resting_bp=resting_bp, cholestrol=cholestrol,
             fasting_blood_sugar=fasting_blood_sugar, resting_electrocardiographic_results=resting_electrocardiographic_results, thalach=thalach, exercise_included_angina=exercise_included_angina, oldpeak=oldpeak, slope=slope, ca=ca, thal=thal, predicted_result_for_heart_disease=predicted_result_for_heart_disease)
 
-        prediction = prediction.save()
+        # prediction = prediction.save()
+        prediction.save()
+        print(predicted_result_for_heart_disease,prediction)
         messages.success(request, "Predicted Successfully!!!")
 
     context = {
-        'result': result
+        'result': result,
+        'predicted_result':predicted_result_for_heart_disease
     }
     return HttpResponse("Result")
 
