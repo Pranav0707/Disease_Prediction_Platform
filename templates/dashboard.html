@@ -76,12 +76,60 @@ a, a:hover, a:focus {
     color: #ffffff;
     text-transform: uppercase;
 }
+.nav-sideBar{
+  position: relative;
+  bottom: 9vh;
+}
 body {
 background-color: #fbfbfb;
 }
 @media (min-width: 991.98px) {
 main {
 padding-left: 240px;
+}
+.card {
+    border-radius: 5px;
+    -webkit-box-shadow: 0 1px 2.94px 0.06px rgba(4,26,55,0.16);
+    box-shadow: 0 1px 2.94px 0.06px rgba(4,26,55,0.16);
+    border: none;
+    margin-bottom: 30px;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+.card .card-block {
+    padding: 25px;
+}
+
+.order-card i {
+    font-size: 26px;
+}
+
+.f-left {
+    float: left;
+}
+
+.f-right {
+    float: right;
+}
+.order-card {
+    color: #fff;
+}
+
+.bg-c-blue {
+    background: linear-gradient(45deg,#4099ff,#73b4ff);
+}
+
+.bg-c-green {
+    background: linear-gradient(45deg,#2ed8b6,#59e0c5);
+}
+
+.bg-c-yellow {
+    background: linear-gradient(45deg,#FFB64D,#ffcb80);
+}
+
+.bg-c-pink {
+    background: linear-gradient(45deg,#FF5370,#ff869a);
 }
 }
 
@@ -119,6 +167,15 @@ overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
 .mainDiv{
     height: 81vh;
 }
+.height-100{
+  height: 100%;
+}
+.width-100{
+  width: 100%;
+}
+.height-50{
+  height: 50%;
+}
     </style>
 </head>
 <body>
@@ -143,59 +200,99 @@ overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
             
         </header>
         <div class="mainDiv">
-        <!-- Sidebar -->
-        <nav id="sidebarMenu" class="collapse d-lg-block sidebar collapse bg-white">
-            <div class="position-sticky">
-            <div class="list-group list-group-flush mx-3 mt-4">
-                <!-- Collapse 1 -->
-                <a class="list-group-item list-group-item-action py-2 ripple" aria-current="true"
-                data-mdb-toggle="collapse" href="#collapseExample1" aria-expanded="true"
-                aria-controls="collapseExample1">
-                <i class="fas fa-tachometer-alt fa-fw me-3"></i><span>Expanded menu</span>
-                </a>
-                <!-- Collapsed content -->
-                <ul id="collapseExample1" class="collapse show list-group list-group-flush">
-                <li class="list-group-item py-1">
-                    <a href="" class="text-reset">Link</a>
-                </li>
-                <li class="list-group-item py-1">
-                    <a href="" class="text-reset">Link</a>
-                </li>
-                <li class="list-group-item py-1">
-                    <a href="" class="text-reset">Link</a>
-                </li>
-                <li class="list-group-item py-1">
-                    <a href="" class="text-reset">Link</a>
-                </li>
-                </ul>
-                <!-- Collapse 1 -->
-
-                <!-- Collapse 2 -->
-                <a class="list-group-item list-group-item-action py-2 ripple" aria-current="true"
-                data-mdb-toggle="collapse" href="#collapseExample2" aria-expanded="true"
-                aria-controls="collapseExample2">
-                <i class="fas fa-chart-area fa-fw me-3"></i><span>Collapsed menu</span>
-                </a>
-                <!-- Collapsed content -->
-                <ul id="collapseExample2" class="collapse list-group list-group-flush">
-                <li class="list-group-item py-1">
-                    <a href="" class="text-reset">Link</a>
-                </li>
-                <li class="list-group-item py-1">
-                    <a href="" class="text-reset">Link</a>
-                </li>
-                <li class="list-group-item py-1">
-                    <a href="" class="text-reset">Link</a>
-                </li>
-                <li class="list-group-item py-1">
-                    <a href="" class="text-reset">Link</a>
-                </li>
-                </ul>
-                <!-- Collapse 2 -->
+          <div class="d-flex height-100">
+            <div style="width: 20.5%;">
+              <nav id="sidebarMenu" class="collapse d-lg-block sidebar collapse bg-white">
+                <div class="nav-sideBar">
+                <div class="list-group list-group-flush mx-3 mt-4">
+                    <!-- Collapse 1 -->
+                    <!-- <a class="list-group-item list-group-item-action py-2 ripple" aria-current="true"
+                    data-mdb-toggle="collapse" href="#collapseExample1" aria-expanded="true"
+                    aria-controls="collapseExample1">
+                    <i class="fas fa-tachometer-alt fa-fw me-3"></i><span>Expanded menu</span>
+                    </a> -->
+                    <!-- Collapsed content -->
+                    <ul id="collapseExample1" class="collapse show list-group list-group-flush">
+                    <li class="list-group-item py-3">
+                        <a href="" class="text-reset">Home</a>
+                    </li>
+                    <li class="list-group-item py-3">
+                        <a href="" class="text-reset">Diseases:</a>
+                    </li>
+                    <li class="list-group-item py-3">
+                        <a href="" class="text-reset">Heart</a>
+                    </li>
+                    <li class="list-group-item py-3">
+                        <a href="" class="text-reset">liver</a>
+                    </li>
+                    <li class="list-group-item py-3">
+                        <a href="" class="text-reset">kidney</a>
+                    </li>
+                    <li class="list-group-item py-3">
+                        <a href="" class="text-reset">Diabetes</a>
+                    </li>
+                    </ul>
+                    <!-- Collapse 1 -->
+    
+                    <!-- Collapse 2 -->
+                    <!-- <a class="list-group-item list-group-item-action py-2 ripple" aria-current="true"
+                    data-mdb-toggle="collapse" href="#collapseExample2" aria-expanded="true"
+                    aria-controls="collapseExample2">
+                    <i class="fas fa-chart-area fa-fw me-3"></i><span>Collapsed menu</span>
+                    </a> -->
+                    <!-- Collapsed content -->
+                    <!-- <ul id="collapseExample2" class="collapse list-group list-group-flush">
+                    
+                    <li class="list-group-item py-1">
+                        <a href="" class="text-reset">Link</a>
+                    </li>
+                    <li class="list-group-item py-1">
+                        <a href="" class="text-reset">Link</a>
+                    </li>
+                    </ul> -->
+                    <!-- Collapse 2 -->
+                </div>
+                </div>
+            </nav>
+            </div>
+            <div style="width: 79.5%;">
+              <div class="container" style="margin-top: 5vh;">
+                <div class="row">
+                    <div class="col-md-4 col-xl-3">
+                        <div class="card bg-c-blue order-card">
+                            <div class="card-block d-flex justify-content-center">
+                                <h6 class="m-b-20">Heart</h6>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-4 col-xl-3">
+                        <div class="card bg-c-green order-card">
+                            <div class="card-block d-flex justify-content-center">
+                                <h6 class="m-b-20">Liver</h6>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-4 col-xl-3">
+                        <div class="card bg-c-yellow order-card">
+                            <div class="card-block d-flex justify-content-center">
+                                <h6 class="m-b-20">kidney</h6>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-4 col-xl-3">
+                        <div class="card bg-c-pink order-card">
+                            <div class="card-block d-flex justify-content-center">
+                                <h6 class="m-b-20">Diabetes</h6>
+                            </div>
+                        </div>
+                    </div>
+              </div>
             </div>
             </div>
-        </nav>
-        <!-- Sidebar -->
+          </div>
         </div>
         <footer class="footer_section">
             <div class="container">
