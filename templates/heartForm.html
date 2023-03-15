@@ -93,7 +93,7 @@ textarea { font-family: 'Work Sans', sans-serif;}
 ::-moz-placeholder { color:#888;}
 :-ms-input-placeholder { color:#888;}
 
-.question-checkbox { border: 5px solid #d7d7d7; margin-bottom: 10px; margin-left: -5px;}
+.question-checkbox { border: 5px solid #d7d7d7; margin-bottom: 10px; margin-left: -5px; padding: 1vh 0.5vw;}
 .question-checkbox .col50 { padding: 1% 2%; width: 46%;}
 .question-checkbox .col50 p { margin: 8px 0 0; font-weight: 600;}
 .question-checkbox .col50 label { margin: 0 10px 0 0; font-size: 13px;}
@@ -321,42 +321,62 @@ background-color: #fbfbfb;
 			<div class="wd100 question-checkbox">
 				<div class="col50 colleft">
 					<p>Age</p>
-					<label name=""><input type="text" value=""> </label>
+					<label name=""><input type="text" value=""> Age in Years</label>
 
 					<p>Gender</p>
-					<input type="radio" id="male" name="gender" value="1">
-                    <label for="html">Male</label><br>
-                    <input type="radio" id="female" name="gender" value="0">
-                    <label for="css">Female</label>
+					<!-- <label name="">Gender</label> -->
+                    <select>
+						<option value=" "></option>
+						<option value=" ">Male</option>
+						<option value=" ">Female</option>
+					</select>
 
 					<p>CP</p>
-					<label name=""><input type="text" value=""></label>
+                    <select>
+						<option value=" "></option>
+						<option value=" ">Typical angina</option>
+						<option value=" ">Atypical angina</option>
+						<option value=" ">Non-anginal pain</option>
+						<option value=" ">Asymptomatic</option>
+					</select>
+					<label name="">chest pain type</label>
 
 					<p>Trestbps</p>
-					<label name=""><input type="text" value=""></label>
+					<label name=""><input type="text" value=""> resting blood pressure</label>
 
 					<p>Chol</p>
-					<label name=""><input type="text" value=""></label>
+					<label name=""><input type="text" value=""> serum cholestoral in mg/dl</label>
 
 					<p>Fbs</p>
-					<label name=""><input type="text" value=""></label>
+					<label name=""><input type="text" value=""> fasting blood sugar</label>
+
+                    <p>Restecg</p>
+					<label name=""><input type="text" value=""> resting electrocardiographic</label>
 				</div>
 
 				<div class="col50 colright">
-					<p>Restecg</p>
-					<label name=""><input type="text" value=""></label>
-
 					<p>Thalach</p>
-					<label name=""><input type="text" value=""></label>
+					<label name=""><input type="text" value=""> maximum heart rate achieved</label>
 
-					<p>Exangoldpeak Slope</p>
-					<label name=""><input type="text" value=""></label>
+					<p>Exang</p>
+					<label name=""><input type="text" value=""> exercise induced angina</label>
+
+                    <p>Oldpeak</p>
+					<label name=""><input type="text" value=""> ST depression induced by exercise</label>
+
+                    <p>Slope</p>
+					<select>
+						<option value=" "></option>
+						<option value=" ">Upsloping</option>
+						<option value=" ">Flatsloping</option>
+						<option value=" ">Downslopins</option>
+					</select>
 
 					<p>Ca</p>
-					<label name=""><input type="text" value=""></label>
+					<label name=""><input type="text" value="">number of major vessels (0-3) colored by flourosopy</label>
 
 					<p>Thal</p>
-					<label name=""><input type="text" value=""></label>
+					<label name=""><input type="text" value=""> thalium stress result</label>
 				</div>
 			</div>
 
