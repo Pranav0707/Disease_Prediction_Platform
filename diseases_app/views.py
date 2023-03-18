@@ -54,5 +54,7 @@ def Heart_Disease_Prediction(request):
     }
     return HttpResponse("Result")
 
+def dashboard(request):
+    return render(request,'dashboard.html')
 
 
