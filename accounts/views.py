@@ -30,7 +30,7 @@ def Userlogin(request):
         if user:
             login(request,user)
             print("User logged In")
-            return redirect('index')
+            return redirect('dashboard')
 
         else:
             messages.error(request,"Username or Password is Incorrect")
