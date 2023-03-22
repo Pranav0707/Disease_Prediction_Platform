@@ -27,6 +27,7 @@ class HeartDiseasePrediction(models.Model):
 class KidneyDiseasePrediction(models.Model):
     user=models.ForeignKey(User,on_delete=models.CASCADE)
     tested_at=models.DateTimeField(auto_now_add=True)
+    age=models.CharField(max_length=255,null=True)
     blood_pressure=models.CharField(max_length=255,null=True)
     specific_gravity=models.CharField(max_length=255,null=True)
     albumin=models.CharField(max_length=255,null=True)
@@ -47,3 +48,38 @@ class KidneyDiseasePrediction(models.Model):
 
     def __str__(self):
         return self.user.username + "kidney results at" + self.tested_at
+    
+
+class DiabetesDiseasePrediction(models.Model):
+    user=models.ForeignKey(User,on_delete=models.CASCADE)
+    tested_at=models.DateTimeField(auto_now_add=True)
+    Pregnancies=models.CharField(max_length=255,null=True)
+    Glucose=models.CharField(max_length=255,null=True)
+    BloodPressure=models.CharField(max_length=255,null=True)
+    SkinThickness=models.CharField(max_length=255,null=True)
+    Insulin=models.CharField(max_length=255,null=True)
+    BMI=models.CharField(max_length=255,null=True)
+    DiabetesPedigreeFunction=models.CharField(max_length=255,null=True)
+    Age=models.CharField(max_length=255,null=True)
+    predicted_result_for_diabetes_disease=models.CharField(max_length=255,null=True,blank=True)
+
+    def __str__(self):
+        return self.user.username + "Diabetes results at" + self.tested_at
+    
+class LiverDiseasePrediction(models.Model):
+    user=models.ForeignKey(User,on_delete=models.CASCADE)
+    tested_at=models.DateTimeField(auto_now_add=True)
+    Age=models.CharField(max_length=255,null=True)
+    Gender=models.CharField(max_length=255,null=True)
+    Total_Bilirubin=models.CharField(max_length=255,null=True)
+    Direct_Bilirubin=models.CharField(max_length=255,null=True)
+    Alkaline_Phosphotase=models.CharField(max_length=255,null=True)
+    Alamine_Aminotransferase=models.CharField(max_length=255,null=True)
+    Aspartate_Aminotransferase=models.CharField(max_length=255,null=True)
+    Total_Protiens=models.CharField(max_length=255,null=True)
+    Albumin=models.CharField(max_length=255,null=True)
+    Albumin_and_Globulin_Ratio=models.CharField(max_length=255,null=True)
+    predicted_result_for_liver_disease=models.CharField(max_length=255,null=True,blank=True)
+
+    def __str__(self):
+        return self.user.username + "Liver results at" + self.tested_at

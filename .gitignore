@@ -1,4 +1,5 @@
 accounts/migrations/
+diseases_app/migrations/
 # accounts/__pycache__/
 __pycache__/
 .db.sqlite3
