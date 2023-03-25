@@ -4,10 +4,10 @@ from django.db import models
 
 
 class Feedback(models.Model):
-    name=models.CharField(max_length=255)
-    phone_number=models.CharField(max_length=25)
-    email=models.EmailField()
-    message=models.TextField()
+    name=models.CharField(max_length=255,null=True)
+    phone_number=models.CharField(max_length=25,null=True)
+    email=models.EmailField(null=True)
+    message=models.TextField(null=True)
     created_at=models.DateTimeField(auto_now=True)
 
 
