@@ -53,7 +53,7 @@ def Heart_Disease_Prediction_View(request):
         'result': result,
         'predicted_result': predicted_result_for_heart_disease
     }
-    return render(request,'heartform.html',context)
+    return render(request,'heart_form.html',context)
 
 
 @login_required(login_url='login')
@@ -110,7 +110,7 @@ def Kidney_Disease_Prediction_View(request):
         'predicted_result': predicted_result_for_kidney_disease
     }
     # return HttpResponse("Result")
-    return render(request,'kidneyform.html',context)
+    return render(request,'kidney_form.html',context)
 
 @login_required(login_url='login')
 def Diabetes_Disease_Prediction_View(request):
@@ -198,4 +198,4 @@ def Liver_Disease_Prediction_View(request):
         'predicted_result': predicted_result_for_liver_disease
     }
     # return HttpResponse("Result")
-    return render(request,'liverform.html',context)
+    return render(request,'liver_form.html',context)
