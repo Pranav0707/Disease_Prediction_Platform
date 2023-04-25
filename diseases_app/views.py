@@ -53,17 +53,17 @@ def Heart_Disease_Prediction_View(request):
         'result': result,
         'predicted_result': predicted_result_for_heart_disease
     }
-    return HttpResponse("Result")
+    return render(request,'heartform.html',context)
 
 
 @login_required(login_url='login')
 def dashboard(request):
-    return render(request, 'dashboard.html')
+    return render(request, 'main_index.html')
 
 
 @login_required(login_url='login')
 def Kidney_Disease_Prediction_View(request):
-    kidney_model = joblib.load('data_science\kidney\model.pkl')
+    kidney_model = joblib.load('data_science\kidney\kidney.pkl')
 
     result = None
     predicted_result_for_kidney_disease = None
@@ -109,12 +109,12 @@ def Kidney_Disease_Prediction_View(request):
         'result': result,
         'predicted_result': predicted_result_for_kidney_disease
     }
-    return HttpResponse("Result")
-
+    # return HttpResponse("Result")
+    return render(request,'kidneyform.html',context)
 
 @login_required(login_url='login')
 def Diabetes_Disease_Prediction_View(request):
-    diabetes_model = joblib.load('data_science\diabetes\model.pkl')
+    diabetes_model = joblib.load('data_science\diabetes\diabetes.pkl')
 
     result = None
     predicted_result_for_diabetes_disease = None
@@ -150,12 +150,13 @@ def Diabetes_Disease_Prediction_View(request):
         'result': result,
         'predicted_result': predicted_result_for_diabetes_disease
     }
-    return HttpResponse("Result")
+    # return HttpResponse("Result")
+    return render(request,'diabetesform.html',context)
 
 
 @login_required(login_url='login')
 def Liver_Disease_Prediction_View(request):
-    liver_model = joblib.load('data_science\liver\model.pkl')
+    liver_model = joblib.load('data_science\liver\liver.pkl')
 
     result = None
     predicted_result_for_liver_disease = None
@@ -196,4 +197,5 @@ def Liver_Disease_Prediction_View(request):
         'result': result,
         'predicted_result': predicted_result_for_liver_disease
     }
-    return HttpResponse("Result")
+    # return HttpResponse("Result")
+    return render(request,'liverform.html',context)
