@@ -24,19 +24,7 @@
     <!-- Right navbar links -->
     <ul class="navbar-nav ml-auto">
       <!-- Navbar Search -->
-      <li class="nav-item">
-        
-        <div class="navbar-search-block">
-          <form class="form-inline">
-            <div class="input-group input-group-sm">
-              <div class="input-group-append">
-
-
-              </div>
-            </div>
-          </form>
-        </div>
-      </li>
+      
       <li class="nav-item">
         <a class="nav-link" data-widget="fullscreen" href="#" role="button">
           <i class="fas fa-expand-arrows-alt"></i>
@@ -75,7 +63,7 @@
           <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
           <li class="nav-item menu-open">
-            <a href="#" class="nav-link active">
+            <a href="{% url 'dashboard'%}" class="nav-link active">
               <i class="nav-icon fas fa-tachometer-alt"></i>
               <p>
                 Dashboard
@@ -93,25 +81,25 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="general.html" class="nav-link">
+                <a href="{% url 'heart'%}" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Heart</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="advanced.html" class="nav-link">
+                <a href="{% url 'liver'%}" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Liver</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="editors.html" class="nav-link">
+                <a href="{% url 'kidney'%}" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Kidney</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="validation.html" class="nav-link">
+                <a href="{% url 'diabetes'%}" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Diabetes</p>
                 </a>
@@ -153,7 +141,7 @@
 
             <div class="card card-warning">
               <div class="card-header">
-                <h3 class="card-title">Survey Form</h3>
+                <h2 class="card-title">Survey Form</h2>
               </div>
               <!-- /.card-header -->
               <div class="card-body">
@@ -234,16 +222,10 @@
                       </select>                    </div>
                     
                   </div>
-                  
-                  
-            
-                  
-                  {% comment %} <div >
-                    <button name="submit" type="submit" class="btn">Submit</button>
-                  </div> {% endcomment %}
-                  <div style="float: right;">
-                    <button type="submit" class="btn btn-success">Submit</button>
-                    </div>
+  
+                  <div class="wd100 d-flex justify-content-center" style="margin-top: 5vh;">
+                    <button name="submit" type="submit" id="submitHeart" data-submit="...Sending">Submit</button>
+                  </div>
                 </form>
               </div>
               
