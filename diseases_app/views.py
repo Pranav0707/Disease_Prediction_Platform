@@ -1,4 +1,4 @@
-from django.shortcuts import render, HttpResponse
+from django.shortcuts import render, HttpResponse ,redirect
 from django.contrib.auth.decorators import login_required
 from .models import HeartDiseasePrediction, KidneyDiseasePrediction, DiabetesDiseasePrediction, LiverDiseasePrediction
 from django.contrib import messages
@@ -31,6 +31,9 @@ def Heart_Disease_Prediction_View(request):
         ca = request.POST.get('ca')
         thal = request.POST.get('thal')
 
+        print(age, sex, chest_pain_type, resting_bp, cholestrol, fasting_blood_sugar,
+                    resting_electrocardiographic_results, thalach, exercise_included_angina, oldpeak, slope, ca, thal)
+
         features = [age, sex, chest_pain_type, resting_bp, cholestrol, fasting_blood_sugar,
                     resting_electrocardiographic_results, thalach, exercise_included_angina, oldpeak, slope, ca, thal]
 
@@ -46,8 +49,9 @@ def Heart_Disease_Prediction_View(request):
 
         # prediction = prediction.save()
         prediction.save()
-        print(predicted_result_for_heart_disease, prediction)
+        print(predicted_result_for_heart_disease)
         messages.success(request, "Predicted Successfully!!!")
+        # return redirect('heart')
 
     context = {
         'result': result,
