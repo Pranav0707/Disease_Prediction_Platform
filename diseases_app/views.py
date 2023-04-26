@@ -155,7 +155,7 @@ def Diabetes_Disease_Prediction_View(request):
         'predicted_result': predicted_result_for_diabetes_disease
     }
     # return HttpResponse("Result")
-    return render(request,'diabetesform.html',context)
+    return render(request,'diabetes_form.html',context)
 
 
 @login_required(login_url='login')
