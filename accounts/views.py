@@ -4,6 +4,7 @@ from django.contrib import messages
 from .models import Feedback
 from accounts.forms import *
 from django.core.mail import send_mail
+from .decorators import *
 # Create your views here.
 def index(request):
     if request.method=="POST":
@@ -21,7 +22,7 @@ def index(request):
             print(e)
     return render(request,'index.html')
 
-
+@unauthenticated
 def Userlogin(request):
     if request.method=="POST":
         username=request.POST.get("username")
@@ -37,7 +38,7 @@ def Userlogin(request):
 
     return render(request,"login.html")
 
-
+@unauthenticated
 def UserRegistration(request):
     form=RegistrationForm()
     if request.method=="POST":
@@ -54,3 +55,6 @@ def UserRegistration(request):
     return render(request,"register.html",context)
 
 
+def Userlogout(request):
+    logout(request)
+    return redirect('login')

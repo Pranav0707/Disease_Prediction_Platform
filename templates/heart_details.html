@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>AdminLTE 3 | DataTables</title>
+  <title>Heart Details</title>
 
   <!-- Google Font: Source Sans Pro -->
   <link href="{% static 'css/style.css' %}" rel="stylesheet" />
@@ -32,11 +32,11 @@
           <i class="fas fa-expand-arrows-alt"></i>
         </a>
       </li>
-      <li class="nav-item">
+      {% comment %} <li class="nav-item">
         <a class="nav-link" data-widget="control-sidebar" data-slide="true" href="#" role="button">
           <i class="fas fa-th-large"></i>
         </a>
-      </li>
+      </li> {% endcomment %}
     </ul>
   </nav>
   <!-- /.navbar -->
@@ -44,7 +44,7 @@
   <!-- Main Sidebar Container -->
   <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
-    <a href="index3.html" class="brand-link">
+    <a href="" class="brand-link">
       <img src="{% static 'images/favicon.png' %}" alt="Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
       <span class="brand-text font-weight-light">Predicto</span>
     </a>
@@ -149,24 +149,53 @@
 
             <div class="card">
               <div class="card-header">
-                <h3 class="card-title">DataTable with default features</h3>
+                <h3 class="card-title">Heart Results</h3>
               </div>
               <!-- /.card-header -->
-              <div class="card-body">
-                <table id="example1" class="table table-bordered table-striped">
+              <div class="card-body" style="overflow-x:auto;">
+                <table id="example1" class="table table-bordered table-striped" style="white-space: nowrap;">
                   <thead>
                   <tr>
-                    <th>Field</th>
-                    <th>Patient Details</th>
+                    <th>user</th>
+                    <th>tested_at</th>
+                    <th>age</th>
+                    <th>sex</th>
+                    <th>chest_pain_type</th>
+                    <th>resting_bp</th>
+                    <th>cholestrol</th>
+                    <th>fasting_blood_sugar</th>
+                    <th>resting_electrocardiographic_results</th>
+                    <th>thalach</th>
+                    <th>exercise_included_angina</th>
+                    <th>oldpeak</th>
+                    <th>slope</th>
+                    <th>ca</th>
+                    <th>thal</th>
+                    <th>predicted_result_for_heart_disease</th>
                   </tr>
                   </thead>
-                  <tbody></tbody>
-                  <tfoot>
-                  <tr>
-                    <th>Field</th>
-                    <th>Patient Details</th>
-                  </tr>
-                  </tfoot>
+                  <tbody>
+                    {% for ele in heart_patient_details %}
+                    <tr>
+                    <td>{{ele.user}}</td>
+                    <td>{{ele.tested_at}}</td>
+                    <td>{{ele.age}}</td>
+                    <td>{{ele.sex}}</td>
+                    <td>{{ele.chest_pain_type}}</td>
+                    <td>{{ele.resting_bp}}</td>
+                    <td>{{ele.cholestrol}}</td>
+                    <td>{{ele.fasting_blood_sugar}}</td>
+                    <td>{{ele.resting_electrocardiographic_results}}</td>
+                    <td>{{ele.thalach}}</td>
+                    <td>{{ele.exercise_included_angina}}</td>
+                    <td>{{ele.oldpeak}}</td>
+                    <td>{{ele.slope}}</td>
+                    <td>{{ele.ca}}</td>
+                    <td>{{ele.thal}}</td>
+                    <td>{{ele.predicted_result_for_heart_disease}}</td>
+                    </tr>
+                    {% endfor %}
+                  </tbody>
                 </table>
               </div>
               <!-- /.card-body -->
@@ -184,9 +213,9 @@
   <!-- /.content-wrapper -->
   <footer class="main-footer">
     <div class="float-right d-none d-sm-block">
-      <b>Version</b> 3.2.0
+
     </div>
-    <strong>Copyright &copy; 2014-2021 <a href="https://adminlte.io">AdminLTE.io</a>.</strong> All rights reserved.
+
   </footer>
 
   <!-- Control Sidebar -->

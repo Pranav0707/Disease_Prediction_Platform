@@ -66,7 +66,8 @@ def dashboard(request):
 
 @login_required(login_url='login')
 def Heart_Details(request):
-    return render(request, 'heart_details.html')
+    heart_patient_details=HeartDiseasePrediction.objects.filter(user=request.user)
+    return render(request, 'heart_details.html',{'heart_patient_details':heart_patient_details})
 
 
 @login_required(login_url='login')
