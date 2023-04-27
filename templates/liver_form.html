@@ -170,7 +170,7 @@
               <!-- /.card-header -->
               <div class="card-body">
                <form class="contact" action="" method="post">
-                
+                {% csrf_token %}
             
                   <div class="wd100 question-checkbox">
                     <div class="col50 colleft">
@@ -180,8 +180,8 @@
                       <p>Gender</p>
                                 <select name="Gender">
                         <option value="Select Gender" disabled="disabled" selected>Select Gender</option>
-                        <option value="1">Male</option>
-                        <option value="0">Female</option>
+                        <option value="0">Male</option>
+                        <option value="1">Female</option>
                       </select>
             
                       <p>TB</p>

@@ -182,13 +182,14 @@ def Liver_Disease_Prediction_View(request):
 
         features = [Age, Gender, Total_Bilirubin, Direct_Bilirubin, Alkaline_Phosphotase, Alamine_Aminotransferase, Aspartate_Aminotransferase, Total_Protiens, Albumin, Albumin_and_Globulin_Ratio
                     ]
+        print(features)
         float_conversion = [float(val) for val in features]
 
         prediction_features = [numpy.array(float_conversion)]
 
         prediction = liver_model.predict(prediction_features)
         predicted_result_for_liver_disease = prediction[0]
-        prediction = DiabetesDiseasePrediction.objects.create(
+        prediction = LiverDiseasePrediction.objects.create(
             user=user, Age=Age, Gender=Gender, Total_Bilirubin=Total_Bilirubin, Direct_Bilirubin=Direct_Bilirubin, Alkaline_Phosphotase=Alkaline_Phosphotase, Alamine_Aminotransferase=Alamine_Aminotransferase, Aspartate_Aminotransferase=Aspartate_Aminotransferase, Total_Protiens=Total_Protiens, Albumin=Albumin, Albumin_and_Globulin_Ratio=Albumin_and_Globulin_Ratio,predicted_result_for_liver_disease=predicted_result_for_liver_disease
 
         )
