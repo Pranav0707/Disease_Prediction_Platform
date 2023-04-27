@@ -132,6 +132,7 @@ def Diabetes_Disease_Prediction_View(request):
         BMI = request.POST.get('BMI')
         DiabetesPedigreeFunction = request.POST.get('DiabetesPedigreeFunction')
         Age = request.POST.get('Age')
+        print(Pregnancies, Glucose, BloodPressure,SkinThickness, Insulin, BMI, DiabetesPedigreeFunction, Age)
 
         features = [Pregnancies, Glucose, BloodPressure,
                     SkinThickness, Insulin, BMI, DiabetesPedigreeFunction, Age]

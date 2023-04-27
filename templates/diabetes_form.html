@@ -157,6 +157,7 @@
               <!-- /.card-header -->
               <div class="card-body">
                <form class="contact" action="" method="post">
+                {% csrf_token %}
 			
             
                   <div class="wd100 question-checkbox">
@@ -182,11 +183,11 @@
                       <input name="Insulin" type="number" step="any" value="" class="form-control" placeholder="2-Hour serum insulin in mu U/ml">
                       
                       <p>BMI</p>
-                      <input name="Insulin" type="number" step="any" value="" class="form-control" placeholder="Body mass index (weight in kg/(height in m)^2)">
+                      <input name="BMI" type="text" value="" class="form-control" placeholder="Body mass index (weight in kg/(height in m)^2)">
                                 
             
                                 <p>DiabetesPedigreeFunction</p>
-                      <input name="DiabetesPedigreeFunction" type="number" step="any" value="" class="form-control" placeholder="Diabetes pedigree function">
+                      <input name="DiabetesPedigreeFunction" type="text" value="" class="form-control" placeholder="Diabetes pedigree function">
                                 
             
                                 <p>Age</p>
