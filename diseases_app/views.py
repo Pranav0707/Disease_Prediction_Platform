@@ -69,6 +69,21 @@ def Heart_Details(request):
     heart_patient_details=HeartDiseasePrediction.objects.filter(user=request.user)
     return render(request, 'heart_details.html',{'heart_patient_details':heart_patient_details})
 
+@login_required(login_url='login')
+def Liver_Details(request):
+    liver_patient_details=LiverDiseasePrediction.objects.filter(user=request.user)
+    return render(request, 'liver_details.html',{'liver_patient_details':liver_patient_details})
+
+@login_required(login_url='login')
+def Kidney_Details(request):
+    kidney_patient_details=KidneyDiseasePrediction.objects.filter(user=request.user)
+    return render(request, 'kidney_details.html',{'kidney_patient_details':kidney_patient_details})
+
+@login_required(login_url='login')
+def Diabetes_Details(request):
+    diabetes_patient_details=DiabetesDiseasePrediction.objects.filter(user=request.user)
+    return render(request, 'diabetes_details.html',{'diabetes_patient_details':diabetes_patient_details})
+
 
 @login_required(login_url='login')
 def Kidney_Disease_Prediction_View(request):

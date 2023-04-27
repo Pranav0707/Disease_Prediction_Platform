@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Heart Details</title>
+  <title>Liver Details</title>
 
   <!-- Google Font: Source Sans Pro -->
   <link href="{% static 'css/style.css' %}" rel="stylesheet" />
@@ -149,7 +149,7 @@
 
             <div class="card">
               <div class="card-header">
-                <h3 class="card-title">Heart Results</h3>
+                <h3 class="card-title">Liver Results</h3>
               </div>
               <!-- /.card-header -->
               <div class="card-body" style="overflow-x:auto;">
@@ -158,41 +158,35 @@
                   <tr>
                     <th>user</th>
                     <th>tested_at</th>
-                    <th>age</th>
-                    <th>sex</th>
-                    <th>chest_pain_type</th>
-                    <th>resting_bp</th>
-                    <th>cholestrol</th>
-                    <th>fasting_blood_sugar</th>
-                    <th>resting_electrocardiographic_results</th>
-                    <th>thalach</th>
-                    <th>exercise_included_angina</th>
-                    <th>oldpeak</th>
-                    <th>slope</th>
-                    <th>ca</th>
-                    <th>thal</th>
-                    <th>predicted_result_for_heart_disease</th>
+                    <th>Age</th>
+                    <th>Gender</th>
+                    <th>Total_Bilirubin</th>
+                    <th>Direct_Bilirubin</th>
+                    <th>Alkaline_Phosphotase</th>
+                    <th>Alamine_Aminotransferase</th>
+                    <th>Aspartate_Aminotransferase</th>
+                    <th>Total_Protiens</th>
+                    <th>Albumin</th>
+                    <th>Albumin_and_Globulin_Ratio</th>
+                    <th>predicted_result_for_liver_disease</th>
                   </tr>
                   </thead>
                   <tbody>
-                    {% for ele in heart_patient_details %}
+                    {% for ele in liver_patient_details %}
                     <tr>
                     <td>{{ele.user}}</td>
                     <td>{{ele.tested_at}}</td>
-                    <td>{{ele.age}}</td>
-                    <td>{{ele.sex}}</td>
-                    <td>{{ele.chest_pain_type}}</td>
-                    <td>{{ele.resting_bp}}</td>
-                    <td>{{ele.cholestrol}}</td>
-                    <td>{{ele.fasting_blood_sugar}}</td>
-                    <td>{{ele.resting_electrocardiographic_results}}</td>
-                    <td>{{ele.thalach}}</td>
-                    <td>{{ele.exercise_included_angina}}</td>
-                    <td>{{ele.oldpeak}}</td>
-                    <td>{{ele.slope}}</td>
-                    <td>{{ele.ca}}</td>
-                    <td>{{ele.thal}}</td>
-                    <td>{{ele.predicted_result_for_heart_disease}}</td>
+                    <td>{{ele.Age}}</td>
+                    <td>{{ele.Gender}}</td>
+                    <td>{{ele.Total_Bilirubin}}</td>
+                    <td>{{ele.Direct_Bilirubin}}</td>
+                    <td>{{ele.Alkaline_Phosphotase}}</td>
+                    <td>{{ele.Alamine_Aminotransferase}}</td>
+                    <td>{{ele.Aspartate_Aminotransferase}}</td>
+                    <td>{{ele.Total_Protiens}}</td>
+                    <td>{{ele.Albumin}}</td>
+                    <td>{{ele.Albumin_and_Globulin_Ratio}}</td>
+                    <td>{{ele.predicted_result_for_liver_disease}}</td>
                     </tr>
                     {% endfor %}
                   </tbody>

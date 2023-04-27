@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Heart Details</title>
+  <title>Kidney Details</title>
 
   <!-- Google Font: Source Sans Pro -->
   <link href="{% static 'css/style.css' %}" rel="stylesheet" />
@@ -149,7 +149,7 @@
 
             <div class="card">
               <div class="card-header">
-                <h3 class="card-title">Heart Results</h3>
+                <h3 class="card-title">Kidney Results</h3>
               </div>
               <!-- /.card-header -->
               <div class="card-body" style="overflow-x:auto;">
@@ -159,40 +159,48 @@
                     <th>user</th>
                     <th>tested_at</th>
                     <th>age</th>
-                    <th>sex</th>
-                    <th>chest_pain_type</th>
-                    <th>resting_bp</th>
-                    <th>cholestrol</th>
-                    <th>fasting_blood_sugar</th>
-                    <th>resting_electrocardiographic_results</th>
-                    <th>thalach</th>
-                    <th>exercise_included_angina</th>
-                    <th>oldpeak</th>
-                    <th>slope</th>
-                    <th>ca</th>
-                    <th>thal</th>
-                    <th>predicted_result_for_heart_disease</th>
+                    <th>blood_pressure</th>
+                    <th>specific_gravity</th>
+                    <th>albumin</th>
+                    <th>sugar_degree</th>
+                    <th>red_blood_cells</th>
+                    <th>blood_glucose_random</th>
+                    <th>blood_urea</th>
+                    <th>serum_creatinine</th>
+                    <th>sodium</th>
+                    <th>potassium</th>
+                    <th>heamoglobin</th>
+                    <th>packed_ceel_volume</th>
+                    <th>white_blood_cell_volume</th>
+                    <th>red_blood_cell_count</th>
+                    <th>appetite</th>
+                    <th>anemia</th>
+                    <th>predicted_result_for_kidney_disease</th>
                   </tr>
                   </thead>
                   <tbody>
-                    {% for ele in heart_patient_details %}
+                    {% for ele in kidney_patient_details %}
                     <tr>
                     <td>{{ele.user}}</td>
                     <td>{{ele.tested_at}}</td>
                     <td>{{ele.age}}</td>
-                    <td>{{ele.sex}}</td>
-                    <td>{{ele.chest_pain_type}}</td>
-                    <td>{{ele.resting_bp}}</td>
-                    <td>{{ele.cholestrol}}</td>
-                    <td>{{ele.fasting_blood_sugar}}</td>
-                    <td>{{ele.resting_electrocardiographic_results}}</td>
-                    <td>{{ele.thalach}}</td>
-                    <td>{{ele.exercise_included_angina}}</td>
-                    <td>{{ele.oldpeak}}</td>
-                    <td>{{ele.slope}}</td>
-                    <td>{{ele.ca}}</td>
-                    <td>{{ele.thal}}</td>
-                    <td>{{ele.predicted_result_for_heart_disease}}</td>
+                    <td>{{ele.blood_pressure}}</td>
+                    <td>{{ele.specific_gravity}}</td>
+                    <td>{{ele.albumin}}</td>
+                    <td>{{ele.sugar_degree}}</td>
+                    <td>{{ele.red_blood_cells}}</td>
+                    <td>{{ele.blood_glucose_random}}</td>
+                    <td>{{ele.blood_urea}}</td>
+                    <td>{{ele.serum_creatinine}}</td>
+                    <td>{{ele.sodium}}</td>
+                    <td>{{ele.potassium}}</td>
+                    <td>{{ele.heamoglobin}}</td>
+                    <td>{{ele.packed_ceel_volume}}</td>
+                    <td>{{ele.white_blood_cell_volume}}</td>
+                    <td>{{ele.red_blood_cell_count}}</td>
+                    <td>{{ele.appetite}}</td>
+                    <td>{{ele.anemia}}</td>
+                    <td>{{ele.predicted_result_for_kidney_disease}}</td>
                     </tr>
                     {% endfor %}
                   </tbody>
