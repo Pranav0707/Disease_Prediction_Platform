@@ -90,7 +90,7 @@ def Kidney_Disease_Prediction_View(request):
         red_blood_cell_count = request.POST.get('red_blood_cell_count')
         appetite = request.POST.get('appetite')
         anemia = request.POST.get('anemia')
-
+        print(age, blood_pressure,specific_gravity, albumin, sugar_degree, red_blood_cells, blood_glucose_random, blood_urea, serum_creatinine, sodium, potassium, heamoglobin, packed_ceel_volume, white_blood_cell_volume, red_blood_cell_count, appetite, anemia)
         features = [age, blood_pressure,
                     specific_gravity, albumin, sugar_degree, red_blood_cells, blood_glucose_random, blood_urea, serum_creatinine, sodium, potassium, heamoglobin, packed_ceel_volume, white_blood_cell_volume, red_blood_cell_count, appetite, anemia]
 

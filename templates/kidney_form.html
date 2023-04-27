@@ -169,56 +169,69 @@
                       <p>Age</p>
                       <input name="age" type="number" step="any" class="form-control" placeholder="Age in Years" value=""> 
             
-                      <p>bp</p>
+                      <p>Blood pressure</p>
                       <input name="blood_pressure" type="number" step="any" class="form-control" placeholder="Blood pressure" value="">
             
-                      <p>sg</p>
-                      <input name="specific_gravity" type="number" step="any" class="form-control" placeholder="Specific gravity" value="">
+                      <p>Specific gravity</p>
+                      <input name="specific_gravity" type="text" step="any" class="form-control" placeholder="Specific gravity" value="">
             
-                      <p>al</p>
+                      <p>Albumin</p>
                       <input name="albumin" type="number" step="any" class="form-control" placeholder="Albumin" value=""> 
             
-                      <p>su</p>
+                      <p>Suger Degree</p>
                       <input name="sugar_degree" type="number" step="any" class="form-control" placeholder="Sugar degree" value="">
             
-                      <p>rbc</p>
-                      <input name="red_blood_cells" type="number" step="any" class="form-control" placeholder="Red blood cells" value="">
-            
-                                <p>bgr</p>
+                      <p>Red Blood Cells</p>
+                      <select name="red_blood_cells">
+                        <option value=" "value="Select Red Blood Cells Range" disabled="disabled" selected>Select Red Blood Cells Range</option>
+                        <option value="1">Normal</option>
+                        <option value="0">Abnormal</option>
+                        
+                      </select>
+                                <p>Blood glucose random</p>
                       <input name="blood_glucose_random" type="number" step="any" class="form-control" placeholder=" Blood glucose random" value=""> 
             
-                                <p>bu</p>
+                                <p>Blood urea</p>
                       <input name="blood_urea" type="number" step="any" class="form-control" placeholder="Blood urea" value=""> 
             
-                                <p>sc</p>
-                      <input name="serum_creatinine" type="number" step="any" class="form-control" placeholder="Serum creatinine" value="">
+                                <p>Serum creatinine</p>
+                      <input name="serum_creatinine" type="text" step="any" class="form-control" placeholder="Serum creatinine" value="">
                     </div>
             
                     <div class="col50 colright">
-                                <p>sod</p>
+                                <p>Sodium</p>
                       <input name="sodium" type="number" step="any" class="form-control" placeholder="Sodium" value="">
             
-                      <p>pot</p>
-                      <input name="potassium" type="number" step="any" class="form-control" placeholder="Potassium" value="">
+                      <p>Potassium</p>
+                      <input name="potassium" type="text" step="any" class="form-control" placeholder="Potassium" value="">
             
-                      <p>hemo</p>
-                      <input name="heamoglobin" type="number" step="any" class="form-control" placeholder="Hemoglobin" value="">
+                      <p>Hemoglobin</p>
+                      <input name="heamoglobin" type="text" step="any" class="form-control" placeholder="Hemoglobin" value="">
             
-                                <p>pcv</p>
+                                <p>Packed ceel volume</p>
                       <input name="packed_ceel_volume" type="number" step="any" class="form-control" placeholder="Packed ceel volume" value="">
             
-                                <p>wbcc</p>
+                                <p>White blood cell count</p>
                       <input name="white_blood_cell_volume" type="number" step="any" class="form-control" placeholder="White blood cell count" value=""> 
             
-                      <p>rbcc</p>
-                      <input name="red_blood_cell_count" type="number" step="any" class="form-control" placeholder="Red blood cell count" value="">
+                      <p>Red blood cell count</p>
+                      <input name="red_blood_cell_count" type="text" step="any" class="form-control" placeholder="Red blood cell count" value="">
             
-                      <p>appet</p>
-                      <input name="appetite" type="number" step="any" class="form-control" placeholder="Appetite" value="">
+                      <p>Appetite</p>
+                      <select name="appetite">
+                        <option value=" "value="Select Appetite" disabled="disabled" selected>Select Appetite</option>
+                        <option value="1">Good</option>
+                        <option value="0">Poor</option>
+                        
+                      </select>                      
             
-                                <p>anne</p>
-                      <input name="anemia" type="number" step="any" class="form-control" placeholder="Anemia" value="">
-            
+                                <p>Anemia</p>
+                                <select name="anemia">
+                                  <option value=" "value="Select Anemia" disabled="disabled" selected>Select Anemia</option>
+                                  <option value="1">Yes</option>
+                                  <option value="0">No</option>
+                                  
+                                </select>  
                     </div>
                   </div>
             
