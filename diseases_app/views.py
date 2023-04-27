@@ -64,6 +64,10 @@ def Heart_Disease_Prediction_View(request):
 def dashboard(request):
     return render(request, 'main_index.html')
 
+@login_required(login_url='login')
+def Heart_Details(request):
+    return render(request, 'heart_details.html')
+
 
 @login_required(login_url='login')
 def Kidney_Disease_Prediction_View(request):
