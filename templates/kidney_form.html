@@ -228,6 +228,15 @@
                   </div>
                 </form>
               </div>
+              {% if predicted_result == 1 %}
+              <script>
+                alert("Not present");
+            </script>
+              {% else %}
+              <script>
+                alert("Present");
+            </script>
+              {% endif %}
               <!-- /.card-body -->
             </div>
             

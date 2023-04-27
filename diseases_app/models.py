@@ -47,7 +47,7 @@ class KidneyDiseasePrediction(models.Model):
     predicted_result_for_kidney_disease=models.CharField(max_length=255,null=True,blank=True)
 
     def __str__(self):
-        return self.user.username + "kidney results at" + self.tested_at
+        return self.user.username + "kidney results at"
     
 
 class DiabetesDiseasePrediction(models.Model):

@@ -199,6 +199,15 @@
                     <button name="submit" type="submit" id="submitDiabetes" data-submit="...Sending">Submit</button>
                   </div>
                 </form>
+                {% if predicted_result == 0 %}
+              <script>
+                alert("Not present");
+            </script>
+              {% else %}
+              <script>
+                alert("Present");
+            </script>
+              {% endif %}
               </div>
               <!-- /.card-body -->
             </div>

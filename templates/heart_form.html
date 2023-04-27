@@ -229,8 +229,14 @@
                 </form>
               </div>
               
-              {% if predicted_result %}
-                  <h3>{{predicted_result}}</h3>
+              {% if predicted_result == 0 %}
+              <script>
+                alert("Not present");
+            </script>
+              {% else %}
+              <script>
+                alert("Present");
+            </script>
               {% endif %}
               <!-- /.card-body -->
             </div>

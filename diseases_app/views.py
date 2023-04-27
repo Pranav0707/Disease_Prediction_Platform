@@ -51,7 +51,7 @@ def Heart_Disease_Prediction_View(request):
         prediction.save()
         print(predicted_result_for_heart_disease)
         messages.success(request, "Predicted Successfully!!!")
-        # return redirect('heart')
+        # return redirect('heartDetails')
 
     context = {
         'result': result,
