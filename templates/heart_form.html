@@ -233,11 +233,13 @@
               <script>
                 alert("Not present");
             </script>
-              {% else %}
+              {% endif %}
+              {% if predicted_result == 1 %}
               <script>
                 alert("Present");
+              
             </script>
-              {% endif %}
+            {% endif %}
               <!-- /.card-body -->
             </div>
 
