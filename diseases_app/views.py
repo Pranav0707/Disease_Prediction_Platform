@@ -6,11 +6,13 @@ from django.contrib import messages
 import numpy
 import joblib
 from django.core.mail import send_mail
+from pathlib import Path
+
 
 
 @login_required(login_url='login')
 def Heart_Disease_Prediction_View(request):
-    heart_model = joblib.load('data_science\heart\model.pkl')
+    heart_model = joblib.load(Path('data_science/heart/model.pkl'))
 
     result = None
     predicted_result_for_heart_disease = None
@@ -87,7 +89,7 @@ def Diabetes_Details(request):
 
 @login_required(login_url='login')
 def Kidney_Disease_Prediction_View(request):
-    kidney_model = joblib.load('data_science\kidney\kidney.pkl')
+    kidney_model = joblib.load(Path('data_science/kidney/kidney.pkl'))
 
     result = None
     predicted_result_for_kidney_disease = None
@@ -138,7 +140,7 @@ def Kidney_Disease_Prediction_View(request):
 
 @login_required(login_url='login')
 def Diabetes_Disease_Prediction_View(request):
-    diabetes_model = joblib.load('data_science\diabetes\diabetes.pkl')
+    diabetes_model = joblib.load(Path('data_science/diabetes/diabetes.pkl'))
 
     result = None
     predicted_result_for_diabetes_disease = None
@@ -181,7 +183,7 @@ def Diabetes_Disease_Prediction_View(request):
 
 @login_required(login_url='login')
 def Liver_Disease_Prediction_View(request):
-    liver_model = joblib.load('data_science\liver\liver.pkl')
+    liver_model = joblib.load(Path('data_science/liver/liver.pkl'))
 
     result = None
     predicted_result_for_liver_disease = None
