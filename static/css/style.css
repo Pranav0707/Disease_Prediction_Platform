@@ -1035,3 +1035,7 @@ textarea { font-family: 'Work Sans', sans-serif;}
 div.dt-buttons{
   width: 45vw !important;
 }
+.symptomsUl li{
+  font-size: 75%;
+  color: #fff;
+}
