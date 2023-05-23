@@ -201,12 +201,13 @@
                 </form>
                 {% if predicted_result == 0 %}
               <script>
-                alert("Not present");
+                alert("Congratulations! You are not diagnosed with diabetes... stay healthy!");
             </script>
               {% endif %}
               {% if predicted_result == 1 %}
               <script>
-                alert("Present");
+                alert("Ooops!!! You may be diagnosed with diabetes.. Please consult a Diabetologist for treatment...");
+                
               
             </script>
             {% endif %}

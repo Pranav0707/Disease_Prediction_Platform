@@ -52,7 +52,7 @@ def Heart_Disease_Prediction_View(request):
         # prediction = prediction.save()
         prediction.save()
         print(predicted_result_for_heart_disease)
-        messages.success(request, "Predicted Successfully!!!")
+        # messages.success(request, "Predicted Successfully!!!")
         # return redirect('heartDetails')
 
     context = {
@@ -129,7 +129,7 @@ def Kidney_Disease_Prediction_View(request):
         # prediction = prediction.save()
         prediction.save()
         print(predicted_result_for_kidney_disease, prediction)
-        messages.success(request, "Predicted Successfully!!!")
+        # messages.success(request, "Predicted Successfully!!!")
 
     context = {
         'result': result,
@@ -171,7 +171,7 @@ def Diabetes_Disease_Prediction_View(request):
         # prediction = prediction.save()
         prediction.save()
         print(predicted_result_for_diabetes_disease, prediction)
-        messages.success(request, "Predicted Successfully!!!")
+        # messages.success(request, "Predicted Successfully!!!")
 
     context = {
         'result': result,
@@ -219,7 +219,7 @@ def Liver_Disease_Prediction_View(request):
         # prediction = prediction.save()
         prediction.save()
         print(predicted_result_for_liver_disease, prediction)
-        messages.success(request, "Predicted Successfully!!!")
+        # messages.success(request, "Predicted Successfully!!!")
 
     context = {
         'result': result,
