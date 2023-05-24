@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -9,7 +10,7 @@
       rel="stylesheet"
     />
 
-    <link href="css/style.css" rel="stylesheet" />
+    <link href="{% static 'css/style.css' %}" rel="stylesheet" />
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
@@ -44,7 +45,7 @@
   <body>
     <div class="hero_area">
       <div class="hero_bg_box bg-img">
-        <img src="/static/images/hero-bg.png" alt="" />
+        <img src="{% static 'images/hero-bg.png' %}" alt="" />
       </div>
 
       <div class="card login-card position-absolute">
